@@ -1,30 +1,16 @@
 import random
 
-# This is a simple dice rolling simulator
 
-print("roll a dice")
+while True:
+    print("Roll a dice? (Y/N)")
+    roll = input().upper()
 
+    if roll == "Y":
+        print("\nResult:", random.randint(1, 6), "and", random.randint(1, 6))
 
-def roll():
-    random_number = random.randint(1, 6)
-    print(random_number)
+    elif roll == "N":
+        print("\nSee you later!")
+        break
 
-
-roll()
-
-print("Another turn? (Y/N)")
-action = str(input())
-action.upper()
-
-
-
-if action == "Y":
-    roll()
-
-
-elif action == "N":
-    exit
-
-else:
-    print("invalid input, try again")
-    action = str(input())
+    else:
+        print("\nInvalid answer, try again.")
